@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexivo</title>
+    <script>
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.href = './index.html'
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Logeado</h1>
+    <div>
+        <h2>Comprar asientos<span id="asientos"></span></h2>
+        <label for="trainsSelect">Seleccione un tren</label>
+        <select name="tren" onchange="updateSits(this.options[this.selectedIndex].value)" id="trainsSelect">
+            <option value="seleccione">Seleccione un tren</option>
+        </select>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
